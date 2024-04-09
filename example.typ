@@ -1,12 +1,11 @@
-#import "assignment.typ": assignment, today_date, code
+#import "lib.typ": assignment, today_date, code
 
 // Use the template
-#show: doc => assignment(
+#show: assignment.with(
   course: [Example Course],
   title: [Assignment],
   author: [Max Mustermann],
-  date: today_date("de"),
-  doc
+  date: [#today_date("de")],
 )
 
 = Task 1

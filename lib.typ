@@ -21,18 +21,12 @@
   
   block(
     stroke: {
-      if border{
-        1pt + luma(240)
-      }
+      if border{ 1pt + luma(240) }
     },
     inset: 2pt,
     table(
       columns: {
-        if line-numbers { 
-          (auto, 1fr)
-        } else {
-          1fr
-        }
+        if line-numbers { (auto, 1fr) } else { 1fr }
       },
       stroke: none,
 
@@ -58,7 +52,7 @@
   title: none, 
   author: "",
   date: none,
-  doc
+  body
 ) = {
 
   set page(
@@ -81,26 +75,22 @@
     ] 
   )
 
-  align(center, text(13pt)[ 
-    #set text(size: 18pt)
-    *#course*\
-    #set text(size: 16pt)
-    *#title*\
-    #set text(size: 13pt)
-    #author\
-    #date
+  align(center, [
+    #text(18pt, strong(course)) \
+    #text(16pt, strong(title)) \
+    #text(13pt, author) \
+    #text(13pt, date)
   ])
 
-  linebreak()
-  
-  set text(size: 11pt)
+  v(1.6cm)
 
   show heading: it => {
-    set block(below: 12pt)
+    v(0.2cm)
     it
+    v(0.2cm)
   } 
 
-  doc
+  body
 }
 
 

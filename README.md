@@ -5,12 +5,11 @@ This is a simple assignment template for [Typst](https://typst.app/) . It includ
 
 ## How to Use:
 ```
-#show: doc => assignment(
-    course: "Example Course",
-	title: "Assignment",
-	author: "Max Mustermann, Stella Musterfrau",
-	date: today_date("de"),
-	doc
+#show: assignment.with(
+  course: [Example Course],
+  title: [Assignment],
+  author: [Max Mustermann],
+  date: [#today_date("de")],
 )
 ```
 ## Example 
