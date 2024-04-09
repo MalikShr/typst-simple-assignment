@@ -77,12 +77,16 @@
 
   align(center, [
     #text(18pt, strong(course)) \
+    #v(11pt, weak: true)
     #text(16pt, strong(title)) \
+    #v(11pt, weak: true)
     #text(13pt, author) \
+    #v(11pt, weak: true)
     #text(13pt, date)
   ])
 
-  v(1.6cm)
+
+  v(1.6cm, weak: true)
 
   show heading: it => {
     v(0.2cm)
